@@ -466,3 +466,9 @@ end
 
 # キーワード引数を使うように書き換えてください
 buy(item:"テレビ", price:15000, count:2)
+
+
+# Menuクラスを定義してください
+class Menu
+  
+end
