@@ -791,3 +791,180 @@ count = gets.chomp.to_i
 # 「お会計は○○円です」となるように出力してください
 
 puts "お会計は#{selected_menu.get_total_price(count)}円です"
+
+
+# requireを使ってfood.rbとdrink.rbを読み込んでください
+require "./food"
+require "./drink"
+
+# Foodクラスのインスタンスを生成して変数food1に代入してください
+
+food1 = Food.new(name:"ピザ",price:800)
+
+# food1に対してinfoメソッドを呼び出して戻り値を出力してください
+
+puts food1.info
+
+# Drinkクラスのインスタンスを生成して変数drink1に代入してください
+
+drink1 = Drink.new(name:"コーラ",price:300)
+# drink1に対してinfoメソッドを呼び出して戻り値を出力してください
+puts drink1.info
+
+
+require "./food"
+require "./drink"
+
+food1 = Food.new(name: "ピザ", price: 800)
+drink1 = Drink.new(name: "コーラ", price: 300)
+
+# food1.calorieに「700」を代入してください
+
+food1.calorie = 700
+
+# food1.calorieを出力してください
+
+puts food1.calorie
+
+# drink1.amountに「500」を代入してください
+
+drink1.amount = 500
+
+# drink1.amountを出力してください
+
+puts drink1.amount
+
+require "./food"
+require "./drink"
+
+food1 = Food.new(name: "ピザ", price: 800)
+food1.calorie = 700
+
+# food1に対してcalorie_infoメソッドを呼び出して戻り値を出力してください
+
+puts food1.calorie_info
+
+# food.rbとdrink.rbを読み込むように書き換えてください
+require "./food"
+require "./drink"
+
+# food1とfood2をFoodクラスのインスタンスに書き換えてください
+food1 = Food.new(name: "ピザ", price: 800)
+food2 = Food.new(name: "すし", price: 1000)
+# drink1とdrink2をDrinkクラスのインスタンスに書き換えてください
+drink1 = Drink.new(name: "コーラ", price: 300)
+drink2 = Drink.new(name: "お茶", price: 200)
+
+menus = [food1, food2, drink1, drink2]
+
+index = 0
+menus.each do |menu|
+  puts "#{index}. #{menu.info}"
+  index += 1
+end
+
+puts "--------------"
+puts "メニューの番号を選択してください"
+order = gets.chomp.to_i
+
+selected_menu = menus[order]
+puts "選択されたメニュー: #{selected_menu.name}"
+
+puts "個数を入力してください(3つ以上で100円割引)"
+count = gets.chomp.to_i
+
+puts "お会計は#{selected_menu.get_total_price(count)}円です"
+
+
+require "./food"
+require "./drink"
+
+# Food.newの引数を書き換えてください
+food1 = Food.new(name: "ピザ", price: 800,calorie: 700)
+food2 = Food.new(name: "すし", price: 1000, calorie: 600)
+
+drink1 = Drink.new(name: "コーラ", price: 300)
+drink1.amount = 500
+drink2 = Drink.new(name: "お茶", price: 200)
+drink2.amount = 400
+
+menus = [food1, food2, drink1, drink2]
+
+index = 0
+menus.each do |menu|
+  puts "#{index}. #{menu.info}"
+  index += 1
+end
+
+puts "--------------"
+puts "メニューの番号を選択してください"
+order = gets.chomp.to_i
+
+selected_menu = menus[order]
+puts "選択されたメニュー: #{selected_menu.name}"
+
+puts "個数を入力してください(3つ以上で100円割引)"
+count = gets.chomp.to_i
+
+puts "お会計は#{selected_menu.get_total_price(count)}円です"
+
+
+require "./food"
+require "./drink"
+
+food1 = Food.new(name: "ピザ", price: 800, calorie: 700)
+food2 = Food.new(name: "すし", price: 1000, calorie: 600)
+
+# Drink.newの引数を書き換えてください
+drink1 = Drink.new(name: "コーラ", price: 300,amount:500)
+drink2 = Drink.new(name: "お茶", price: 200,amount:400)
+
+menus = [food1, food2, drink1, drink2]
+
+index = 0
+menus.each do |menu|
+  puts "#{index}. #{menu.info}"
+  index += 1
+end
+
+puts "--------------"
+puts "メニューの番号を選択してください"
+order = gets.chomp.to_i
+
+selected_menu = menus[order]
+puts "選択されたメニュー: #{selected_menu.name}"
+
+puts "個数を入力してください(3つ以上で100円割引)"
+count = gets.chomp.to_i
+
+puts "お会計は#{selected_menu.get_total_price(count)}円です"
+
+
+# requireを用いて、Dateクラスを読み込んでください
+require "date"
+
+# 変数birthdayに、Dateクラスのインスタンスを代入してください
+
+birthday = Date.new(2000,1,1)
+
+# 変数birthdayをputsしてください
+
+puts birthday
+
+# 変数birthdayにsunday?メソッドを用いた結果をputsしてください
+
+puts birthday.sunday?
+
+require "date"
+
+# 変数todayに、Date.todayの戻り値を代入してください
+
+today = Date.today
+
+# 変数todayをputsしてください
+
+puts today
+
+# 変数todayに対してsunday?メソッドを用いた結果をputsしてください
+
+puts today.sunday?
