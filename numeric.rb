@@ -38,3 +38,5 @@ while i <= 100000 do
    i += 1
   
 end
+
+puts "WEBCAMP".length
